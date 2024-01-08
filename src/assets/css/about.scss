@@ -1,0 +1,105 @@
+@import "../../assets/css/varibales.scss";
+.section-about-page {
+  .about-bg-img {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background: url("/assets/images/about-bg.png");
+    background-size: 100%;
+    background-repeat: repeat;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: -1;
+  }
+  .section-about-page-content {
+    padding: 120px 0px 40px;
+    border-radius: 64px;
+    background: $--white;
+    margin-bottom: 80px;
+    .about-page-col {
+      margin-bottom: 80px;
+      .about-page-card {
+        border: 0px;
+        padding-right: 32px;
+        .card-img-top {
+          border-radius: 8px;
+        }
+        .about-card-body {
+          padding: 0px;
+          .about-card-title {
+            color: $--navy-9;
+            font-family: Hiragino Kaku Gothic ProN;
+            font-size: 24px;
+            // font-style: normal;
+            // font-weight: 600;
+            line-height: 32.4px;
+            letter-spacing: 1.2px;
+            margin: 24px 0px 12px;
+          }
+          .about-card-text {
+            color: $--navy-9;
+            font-family: Hiragino Kaku Gothic ProN;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28.8px;
+            letter-spacing: 0.8px;
+          }
+        }
+      }
+      .border-right {
+        border-right: 1px solid $--envelope-white;
+        padding-right: 32px;
+        border-radius: 0px;
+      }
+    }
+    .about-page-col a {
+      text-decoration: none;
+    }
+    .about-page-col a:hover {
+      color: inherit;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section-about-page {
+    position: relative;
+    z-index: 2;
+    .about-bg-img {
+  top: 0px;
+    }
+    .section-about-page-content {
+      padding: 32px 0px;
+      margin-bottom: 64px;
+      border-radius: 24px;
+      .about-page-col {
+        margin-bottom: 32px;
+        padding: 0px 32px 0px 32px;
+        .about-page-card {
+          padding-right: 0px;
+          .card-img-top {
+            border-radius: 8px;
+          }
+          .about-card-body {
+            padding: 0px;
+            .about-card-title {
+              font-size: 20px;
+              line-height: 27px;
+              letter-spacing: 1px;
+              margin: 16px 0px 8px;
+            }
+          }
+        }
+        .border-right {
+          padding-right: 0px;
+        }
+      }
+      .about-page-col a {
+        text-decoration: none;
+      }
+      .about-page-col a:hover {
+        color: inherit;
+      }
+    }
+  }
+}

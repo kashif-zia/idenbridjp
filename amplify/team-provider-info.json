@@ -1,0 +1,35 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-idenbridjp-dev-110959-authRole",
+      "UnauthRoleArn": "arn:aws:iam::812096089383:role/amplify-idenbridjp-dev-110959-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::812096089383:role/amplify-idenbridjp-dev-110959-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-idenbridjp-dev-110959-deployment",
+      "UnauthRoleName": "amplify-idenbridjp-dev-110959-unauthRole",
+      "StackName": "amplify-idenbridjp-dev-110959",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:812096089383:stack/amplify-idenbridjp-dev-110959/d90b03f0-5069-11ee-bb31-0ee8020b7021",
+      "AmplifyAppId": "d38e7oa0jxzgi5"
+    },
+    "categories": {
+      "function": {
+        "idenbridJPCareerHandler": {
+          "deploymentBucketName": "amplify-idenbridjp-dev-110959-deployment",
+          "s3Key": "amplify-builds/idenbridJPCareerHandler-4d376d5278304d773444-build.zip"
+        },
+        "idenbridJPContactUsHandler": {
+          "deploymentBucketName": "amplify-idenbridjp-dev-110959-deployment",
+          "s3Key": "amplify-builds/idenbridJPContactUsHandler-594f646e424e69516b30-build.zip"
+        }
+      },
+      "api": {
+        "idenbridjpcareerapi": {},
+        "idenbridjpcontactus": {}
+      },
+      "storage": {
+        "idenbridjpcareer": {},
+        "idenbridjpcontactus": {}
+      }
+    }
+  }
+}

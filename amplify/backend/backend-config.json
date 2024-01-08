@@ -1,0 +1,116 @@
+{
+  "api": {
+    "idenbridjpcareerapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "idenbridJPCareerHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "idenbridjpcontactus": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "idenbridJPContactUsHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "idenbridJPCareerHandler": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "idenbridjpcareer"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "idenbridJPContactUsHandler": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "idenbridjpcontactus"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_idenbridJPCareerHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "idenbridJPCareerHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_idenbridJPCareerHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "idenbridJPCareerHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_idenbridJPContactUsHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "idenbridJPContactUsHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_idenbridJPContactUsHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "idenbridJPContactUsHandler"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "idenbridjpcareer": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "idenbridjpcontactus": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

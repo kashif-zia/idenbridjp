@@ -1,0 +1,134 @@
+@import "../../assets/css/varibales.scss";
+
+.call-to-action {
+  background-image: url("../../assets/images/Contact.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px auto 120px;
+  padding: 142px 0px 152px;
+  position: relative;
+  z-index: 1;
+  max-width: 1376px;
+  border-radius: 24px;
+
+  .contactus-h2 {
+    color: $--envelope-white;
+    font-family: Brandon Grotesque;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 57.6px;
+    letter-spacing: 1.92px;
+  }
+
+  .contactus-p {
+    color: $--envelope-white;
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28.8px;
+    letter-spacing: 0.8px;
+  }
+
+  .action-btn-group {
+    display: flex;
+    column-gap: 32px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .action-btn {
+    border-radius: 100px;
+    background: $--yellow-yellow-3;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 256px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: $--navy-9;
+    font-family: Hiragino Kaku Gothic StdN;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.7px;
+    gap: 8px;
+    transition: 0.5s all;
+  }
+
+  .action-btn:hover {
+    background: $--yellow-yellow-4;
+    color: $--navy-9;
+    text-decoration: none;
+    
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .call-to-action {
+    .action-btn-group {
+      column-gap: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .call-to-action {
+    padding: 142px 30px 150px;
+    margin: 0px auto 80px;
+
+    .contactus-h2 {
+      font-size: 32px;
+    }
+
+    .action-btn-group {
+      gap: 15px;
+    }
+
+    .action-btn {
+      gap: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .call-to-action {
+    padding: 44px 24px 60px 24px;
+
+    .action-btn-group {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .action-btn {
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .call-to-action {
+        padding: 44px 24px 60px 24px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .call-to-action {
+    min-height: 392px;
+         padding: 44px 24px 60px 24px;
+    min-height: 392px;
+
+    .contactus-p {
+      font-size: 14px;
+    }
+
+    .contactus-h2 {
+      font-size: 32px;
+    }
+  }
+}

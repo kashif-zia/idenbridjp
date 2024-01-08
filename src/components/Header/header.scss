@@ -1,0 +1,158 @@
+@import '../../assets/css/varibales.scss';
+.main-header {
+	padding: 32px 9px;
+	opacity: 0;
+	animation: showElement 1s ease forwards;
+	animation-delay: 2.5s;
+	.idenbrid-logo {
+		position: relative;
+		z-index: 1;
+	}
+	.jp-text {
+		color: $--navy-9;
+		font-size: 10px;
+		text-align: center;
+		font-family: Hiragino Kaku Gothic ProN;
+		letter-spacing: 0.5px;
+		line-height: 10px;
+	}
+
+	.menu-name {
+		color: $--navy-9;
+		font-family: Brandon Grotesque;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: 0.8px;
+		margin-bottom: 6px;
+	}
+
+	.menu-item {
+		display: flex;
+		flex-direction: column;
+	}
+	.btns-group {
+		.contact-btn {
+			border-radius: 48px;
+			background-color: $--yellow-yellow-3;
+			border-color: $--yellow-yellow-3;
+			color: $--navy-9;
+			font-family: Hiragino Kaku Gothic StdN;
+			font-size: 14px;
+			line-height: 21px;
+			letter-spacing: 0.7px;
+			padding: 0px 24px;
+			height: 48px;
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			transition: 0.5s all;
+		}
+		.contact-btn:hover {
+			text-decoration: none;
+			background-color: $--yellow-yellow-4;
+		}
+	}
+	#basic-navbar-nav .nav-link {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	.navbar-brand {
+		position: relative;
+		z-index: 10;
+	}
+
+	.navbar-nav {
+		align-items: center;
+	}
+
+	.lang-button {
+		border-radius: 27.5px;
+		background: $--gray-gray-1;
+		height: 48px;
+		width: 96px;
+		border: none;
+	}
+
+	.lang-button {
+		.lang-en,
+		.lang-slash {
+			color: $--gray-gray-4;
+			font-family: 'Roboto-Bold';
+			font-size: 15px;
+			line-height: 15px;
+			letter-spacing: 0.75px;
+			font-weight: 700;
+		}
+
+		.lang-jp {
+			color: $--gray-gray-4;
+			font-family: Roboto;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 100%;
+			letter-spacing: 0.75px;
+		}
+		.active {
+			color: $--blue-passion-sea;
+		}
+	}
+
+	.btns-group {
+		display: flex;
+		column-gap: 12px;
+		margin-left: 24px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1080px) {
+	.main-header {
+		#basic-navbar-nav .nav-link {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.main-header {
+		padding: 20px;
+		z-index: 10;
+		position: relative;
+		.navbar {
+			padding: 0px;
+		}
+	}
+	.main-logo {
+		width: 124px;
+		height: 32px;
+		object-fit: cover;
+	}
+}
+@media (max-width: 768px) {
+	.main-header {
+		.navbar-toggler {
+			background-color: $--white;
+			position: fixed;
+			right: 10px;
+			z-index: 10;
+		}
+	}
+	.main-logo pattern img {
+		width: 124px;
+	}
+}
+
+@keyframes showElement {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}

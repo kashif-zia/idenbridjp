@@ -1,0 +1,274 @@
+@import '../../../assets/css/varibales.scss';
+
+.main-banner {
+	overflow: hidden;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+
+	.banner-h1 h1 {
+		color: $--navy-9;
+		font-family: Brandon Grotesque;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0.64px;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+		width: max-content;
+		position: relative;
+		overflow: hidden;
+		color: rgba(20, 20, 133, 0);
+		animation: showHeading 1s ease forwards;
+		animation-delay: 0.35s;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			height: 80%;
+			opacity: 1;
+			background-color: $--navy-9;
+			animation: fillLine 1s ease forwards;
+		}
+		&:nth-child(2) {
+			animation-delay: 0.55s;
+			&::before {
+				animation-delay: 0.2s;
+			}
+		}
+		&:nth-child(3) {
+			animation-delay: 0.75s;
+			&::before {
+				animation-delay: 0.4s;
+			}
+		}
+	}
+
+	.custom-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.banner-video {
+		top: -100px;
+		left: -120px;
+		position: relative;
+		transform: scale(0);
+		transform-origin: 200px 420px;
+		animation: videoBox 1s ease forwards;
+	}
+
+	.background-video {
+		height: 504px;
+		width: 503.995px;
+		right: -252px;
+		object-fit: none;
+		position: absolute;
+		top: 250px;
+		transform: translate(-50%, -50%) rotate(45deg);
+		-webkit-transform: translate(-50%, -50%) rotate(45deg);
+		-moz-transform: translate(-50%, -50%) rotate(45deg);
+		-ms-transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	.text-col {
+		width: 45%;
+		max-width: 523px;
+	}
+
+	p {
+		color: $--gray-gray-8;
+		font-feature-settings: 'palt' on;
+		font-family: 'Gothic A1';
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 35px;
+		letter-spacing: 2px;
+		margin-bottom: 27px;
+	}
+
+	.banner-text {
+		p,
+		span {
+			color: rgba(20, 20, 133, 0);
+			animation: showHeading 1s ease forwards;
+			animation-delay: 1.4s;
+		}
+	}
+
+	.contact-btn {
+		border-radius: 100px;
+		background: var(--grad-1, linear-gradient(142deg, #102f9e 0%, #4800a5 100%));
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+		color: var(--white, #fff);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 21px;
+		letter-spacing: 0.7px;
+		border: none;
+		padding: 15px;
+		width: 150px;
+		height: 56px;
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: showElement 1s ease forwards;
+		animation-delay: 1.6s;
+	}
+	.contact-btn:hover {
+		text-decoration: none;
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+			linear-gradient(98deg, #102f9e 2.96%, #4800a5 105.92%);
+	}
+
+	.video-col {
+		width: 55%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+	.main-banner {
+		height: 480px;
+		.banner-video {
+			height: 550px
+		}
+		.banner-h1 h1 {
+			font-size: 42px;
+		}
+	}
+}
+
+@media (max-width: 1080px) and (min-width: 768px) {
+	.main-banner {
+		.banner-h1 h1 {
+			font-size: 35px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.banner-btn {
+		display: none;
+	}
+
+	.main-banner {
+		margin-top: -80px;
+		height: auto;
+		.custom-row {
+			flex-direction: column-reverse;
+		}
+
+		.text-col {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.video-col {
+			width: 100%;
+			max-width: 100%;
+			height: 316px;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+
+		.banner-video {
+			width: 322.378px;
+			height: 316.022px;
+			right: -60px;
+			left: initial;
+			top: initial;
+			position: absolute;
+			transform: scale(0);
+			transform-origin: 0px 200px;
+			animation: videoBoxMB 1s ease forwards;
+		}
+
+		.banner-h1 h1 {
+			font-size: 32px;
+			background:
+				url('/assets/images/text-bg.png'),
+				lightgray -4.341px -5.117px / 161.493% 165.685% no-repeat;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-family: Brandon Grotesque;
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+			background-size: 30% 40%;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 24.5px;
+			margin-bottom: 0px;
+		}
+	}
+}
+
+@keyframes fillLine {
+	0% {
+		left: 0%;
+		right: 100%;
+	}
+	50% {
+		left: 0%;
+		right: 0%;
+	}
+	100% {
+		left: 100%;
+		right: 0%;
+	}
+}
+@keyframes showHeading {
+	0% {
+		color: rgba(20, 20, 133, 0);
+	}
+	50% {
+		color: rgba(20, 20, 133, 1);
+	}
+	100% {
+		color: rgba(20, 20, 133, 1);
+	}
+}
+@keyframes showElement {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes videoBoxMB {
+	0% {
+		transform: scale(0);
+		display: block;
+	}
+	100% {
+		transform: scale(1);
+		top: initial;
+		right: -60px;
+	}
+}
+
+@keyframes videoBox {
+	0% {
+		transform: scale(0);
+		display: block;
+	}
+	100% {
+		transform: scale(1);
+		top: 0px;
+		left: 0px;
+	}
+}
